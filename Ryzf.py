@@ -6,34 +6,26 @@ import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
 from colorama import init, Fore
+import time
 
 
-# 初始化colorama（兼容全终端颜色）
 init(autoreset=True)
 
-
 def print_startup_art():
-    """打印启动图案"""
-    startup_art = f"""
-{Fore.MAGENTA}
-                                                                   *
-█████  █   █ █   █ █   █ █   █       █████  █   █ █   █ █   █   *
-█   █ █   █ █   █ █   █ █   █       █   █ █   █ █   █ █   █   *
-█████  █████ █   █ █   █ █   █       █████  █████ █   █ █   █   *
-█   █ █   █ █   █ █   █ █   █       █   █ █   █ █   █ █   █   *
-█   █ █   █ █████ █████ █████       █   █ █   █ █████ █████   *
-                                                                   *
-     ███    █    █    █    █       &       ███    █    █    █    █   *
-     █  █  █ █  █ █  █ █  █ █               █    █ █  █ █  █ █  █ █   *
-     ███   █   █ █   █ █   █               ███   █   █ █   █ █   █   *
-     █  █  █   █ █   █ █   █               █    █   █ █   █ █   █   *
-     █  █   █ █  █ █  █ █ █                ███   █ █  █ █  █ █ █   *
-  
-                                                                   *
-{Fore.RESET}
-"""
+    startup_art = f"""{Fore.YELLOW}
+    ___       ___       ___       ___   
+   |   |     |   |     |   |     |   |  
+       |_R__|     |__R_|    |__R_|    |__R_|  
+  _______   _______   _______   _______ 
+ |       | |       | |       | |       |
+ |   R   | |   y   | |   z   | |   f   |
+ |_______| |_______| |_______| |_______|
+                                        
+[ Ryzf -  Fuzz Tool v1.0 ]
+{Fore.RESET}"""
     print(startup_art)
-    time.sleep(0.3)
+    time.sleep(0.5)  
+
 
 
 def remove_duplicates(lst):
@@ -231,3 +223,4 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
         print("\n⚠️ 用户中断，程序退出")
         sys.exit(0)
+
