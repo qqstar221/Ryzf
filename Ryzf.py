@@ -8,7 +8,6 @@ from concurrent.futures import ThreadPoolExecutor
 from colorama import init, Fore
 import time
 
-
 init(autoreset=True)
 
 def print_startup_art():
@@ -223,4 +222,5 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
         print("\n⚠️ 用户中断，程序退出")
         sys.exit(0)
+
 
