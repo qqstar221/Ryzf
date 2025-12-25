@@ -9,6 +9,11 @@
 - **工程化设计**：支持多线程（1-10）、代理转发（BurpSuite等）、测试结果本地保存；
 - **灵活字典**：内置全覆盖默认字典，也支持自定义字典文件（同目录加载）。
 
+```
+Python 版本	Python 3.6 及以上
+pip install -r requirements.txt
+```
+
 <img src="./pics/1.png" width = "800" height = "500" alt="1" align=center />
 
 ````
