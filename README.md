@@ -10,4 +10,16 @@
 - **灵活字典**：内置全覆盖默认字典，也支持自定义字典文件（同目录加载）。
 
 <img src="./pics/1.png" width = "800" height = "500" alt="1" align=center />
+````
+usage: Ryzf.py [-h] [-d D] -u U [-t T] [-p P] [-l L] [-e]
+
+options:
+  -h, --help  show this help message and exit
+  -d D        指定脚本同目录下的自定义字典文件名（不填则用内置字典）
+  -u U        目标URL（必须含"FUZZ"替换标记，例：http://xxx/index.php?url=FUZZ）
+  -t T        结果保存的TXT文件路径（例：result.txt，不填则不保存）
+  -p P        HTTP代理（格式：ip:port，例：127.0.0.1:8080）
+  -l L        线程数（1-10，默认5）
+  -e          仅测试编码后的payload（需选择编码方式）
+````
 <img src="./pics/2.png" width = "800" height = "500" alt="2" align=center />
