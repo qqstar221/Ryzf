@@ -13,7 +13,7 @@ init(autoreset=True)
 
 
 def print_startup_art():
-    """打印粉色像素风格的 Ryyyy & Czzzz 启动图案（无黑色背景）"""
+    """打印启动图案"""
     startup_art = f"""
 {Fore.MAGENTA}
                                                                    *
@@ -54,7 +54,7 @@ def parse_arguments():
     )
     parser.add_argument('-d', help='指定脚本同目录下的自定义字典文件名（不填则用内置字典）')
     parser.add_argument('-u', required=True, help='目标URL（必须含"FUZZ"替换标记，例：http://xxx/index.php?url=FUZZ）')
-    parser.add_argument('-t', help='结果保存的TXT文件路径（例：result.txt，不填则不保存）')
+    parser.add_argument('-t', help='结果保存的TXT文件路径（不填则不保存）')
     parser.add_argument('-p', help='HTTP代理（格式：ip:port，例：127.0.0.1:8080）')
     parser.add_argument('-l', type=int, default=5, help='线程数（1-10，默认5）')
     parser.add_argument('-e', action='store_true', help='仅测试编码后的payload（需选择编码方式）')
@@ -103,7 +103,7 @@ def load_dictionary(dict_filename):
 
 
 def get_encoding_func():
-    """交互选择编码方式，返回编码函数+编码名称（修复Unicode编码不转义问题）"""
+    """交互选择编码方式"""
     print("\n=== 选择编码方式 ===")
     print("1. URL编码（例：!→%21）")
     print("2. Unicode编码（例：!→\\u0021）")
@@ -208,7 +208,7 @@ def main():
     if args.t:
         try:
             with open(args.t, 'w', encoding='utf-8') as f:
-                f.write(f"=== Fuzz测试结果 ===\n")
+                f.write(f"=== 测试结果 ===\n")
                 f.write(f"目标URL：{args.u}\n")
                 f.write(f"测试类型：{test_type}\n")
                 f.write(f"测试总数：{len(test_queue)}\n")
