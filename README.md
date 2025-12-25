@@ -10,6 +10,7 @@
 - **灵活字典**：内置全覆盖默认字典，也支持自定义字典文件（同目录加载）。
 
 <img src="./pics/1.png" width = "800" height = "500" alt="1" align=center />
+
 ````
 usage: Ryzf.py [-h] [-d D] -u U [-t T] [-p P] [-l L] [-e]
 
@@ -21,5 +22,7 @@ options:
   -p P        HTTP代理（格式：ip:port，例：127.0.0.1:8080）
   -l L        线程数（1-10，默认5）
   -e          仅测试编码后的payload（需选择编码方式）
+
 ````
+
 <img src="./pics/2.png" width = "800" height = "500" alt="2" align=center />
